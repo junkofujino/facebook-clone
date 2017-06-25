@@ -1,3 +1,86 @@
 // Place all the styles related to the topics controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.wrapper {
+  margin-bottom: 74px;
+  padding: 20px 20px 20px 35px;
+  .row {
+    border-bottom: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+    word-wrap: break-word;
+  }
+}
+
+#row1 {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+#row2 {
+    padding-top: 0;
+  }
+
+#row3 {
+    border-bottom: solid 1px #ccc;
+  }
+
+#wrp1 {
+    padding-bottom: 0;
+    text-align: center;
+  }
+
+#col1 {
+    width: 70%;
+    float: left;
+  }
+
+#col2 {
+    width: 30%;
+    text-align: right;
+    float: right;
+  }
+
+#col3 {
+      width: 48%;
+      float: left;
+  }
+
+#col4 {
+      width: 48%;
+      float: right;
+    }
+
+#col5 {
+      width: 50%;
+      float: left;
+    }
+
+#col6 {
+      width: 50%;
+      float: right;
+    }
+
+#col7 {
+      width: 20%;
+      float: left;
+    }
+
+#col8 {
+      width: 80%;
+      float: right;
+    }
+
+input[type="submit"].btn-block{
+  margin: 15px 0;
+}
+
+.container{
+  padding-bottom: 85px;
+}
+
+p#tw_date {
+    color: grey;
+    font-size: 12px;
+}

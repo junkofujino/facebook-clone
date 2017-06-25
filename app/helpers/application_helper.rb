@@ -8,7 +8,7 @@ module ApplicationHelper
       img_url = 'no_image.png'
     end
 
-    if page == 'blogs'
+    if page == 'topics'
      image_tag(img_url, alt: user.name, class:'img1')
     else
      image_tag(img_url, alt: user.name, class:'img1')

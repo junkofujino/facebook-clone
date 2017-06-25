@@ -1,14 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FacebookClone</title>
+  <title>Achieve</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+  <% if user_signed_in? %>
+    <script>
+      var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',{
+        cluster: 'ap1',
+        encrypted: true
+      });
+
+      var channel = pusher.subscribe("user_<%= current_user.id %>_channel");
+      channel.bind('comment_created', function(data) {
+        alert(data.message);
+      });
+      channel.bind('notification_created', function(data) {
+        $('#unread_count').html(data.unread_counts);
+      });
+    </script>
+  <% end %>
 </head>
 <body>
 
+  <header>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <ul class="nav navbar-nav">
+          <li><%= link_to "Achieve", root_path %></li>
+          <li><%= link_to "トップページ", root_path %></li>
+          <li><%= link_to "お問い合わせ", new_contact_path %></li>
+          <li><%= link_to notifications_index_path, class: "navbar-brand" do %>
+           <i class="fa fa-bell fa-1x"><span id="unread_count"><%= @notifications_count %></span></i>
+           <% end %></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><%= link_to "ブログ一覧", topics_path %></li>
+              <% if user_signed_in? %>
+                <li><%= link_to 'ユーザー一覧', users_path %></li>
+                <li><%= link_to "メッセージ一覧", conversations_path %></li>
+                <li><%= link_to "マイページ", edit_user_registration_path %></li>
+                <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li><%= link_to "ログイン", new_user_session_path %></li>
+                <li><%= link_to "サインアップ", new_user_registration_path %></li>
+              <% end %>
+              </ul>
+          </li>
+        </ul>
+
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  </header>
+
 <%= yield %>
+
+  <footer>
+    <p>運営会社DIVE INTO CODE株式会社</p>
+    <p>© 2015-2016 Copyright DIVE INTO CODE Corp.</p>
+  </footer>
 
 </body>
 </html>
