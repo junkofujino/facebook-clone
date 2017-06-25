@@ -9,9 +9,8 @@
    <div class="row" id="row1">
     <div class="col" id="col1">
       <%= link_to topic_path(topic.id) do %>
-        <h4><strong>タイトル:<%= topic.title %></strong></h4>
+        <h4><strong><%= topic.content %></strong></h4>
       <% end %>
-      <p>本文:<%= topic.content %></p>
     </div>
     <div class="col" id="col2">
       <p class="img"><%= profile_img(topic.user,"topics") if profile_img(topic.user,"topics") %></p>

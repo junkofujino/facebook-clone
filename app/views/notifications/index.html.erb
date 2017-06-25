@@ -12,7 +12,7 @@
          <div class="col" id="col8">
            既読
              <p>
-               <%= notification.comment.user.try(:name) %>さんがあなたの投稿 (<%= link_to "#{notification.comment.topic.title}", topic_path(notification.comment.topic, notification_id: notification.id) %>) にコメントしました。
+               <%= notification.comment.user.try(:name) %>さんがあなたの投稿 (<%= link_to "#{notification.comment.topic.content}", topic_path(notification.comment.topic, notification_id: notification.id) %>) にコメントしました。
              </p>
              <p><%= notification.created_at %></p>
           </div>
@@ -26,7 +26,7 @@
            <div class="col" id="col8">
              未読
                <p>
-                 <%= notification.comment.user.try(:name) %>さんがあなたの投稿 (<%= link_to "#{notification.comment.topic.title}", topic_path(notification.comment.topic, notification_id: notification.id) %>) にコメントしました。
+                 <%= notification.comment.user.try(:name) %>さんがあなたの投稿 (<%= link_to "#{notification.comment.topic.content}", topic_path(notification.comment.topic, notification_id: notification.id) %>) にコメントしました。
                </p>
                <p><%= notification.created_at %></p>
             </div>

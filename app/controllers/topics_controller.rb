@@ -19,16 +19,7 @@ class TopicsController < ApplicationController
   end
 
   def new
-    if params[:back]
-      @topic = Topic.new(topics_params)
-    else
       @topic = Topic.new
-    end
-  end
-
-  def confirm
-    @topic = Topic.new(topics_params)
-    render :new if @topic.invalid?
   end
 
   def create
@@ -36,7 +27,6 @@ class TopicsController < ApplicationController
     @topic.user_id = current_user.id
     if @topic.save
      redirect_to topics_path, notice: "投稿を作成しました！"
-     NoticeMailer.sendmail_topic(@topic).deliver
     else
      render 'new'
     end
@@ -60,7 +50,7 @@ class TopicsController < ApplicationController
 
   private
    def topics_params
-     params.require(:topic).permit(:title, :content)
+     params.require(:topic).permit(:content)
    end
 
    def set_topic

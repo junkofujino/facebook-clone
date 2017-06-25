@@ -18,24 +18,15 @@ Rails.application.routes.draw do
     resources :messages, only: [:index, :create]
   end
 
-  resources :topics do
+  resources :topics, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :comments
-    post :confirm, on: :collection
   end
-
-  resources :contacts, only: [:index, :new, :create] do
-    collection do
-      post :confirm
-    end
-  end
-
-  resources :poems, only: [:index, :show]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
   end
 
-  root 'top#index'
+  root 'topics#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -30,15 +30,14 @@
   <div class="field">
     <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: "パスワード（確認）" %>
   </div>
-  <br>
+<% end %>
 
+  <br>
   <div class="field">
     <%= f.password_field :current_password, autocomplete: "off", class: 'form-control', placeholder: "現在のパスワード" %>
     <p>変更には現在のパスワードが必要です</p>
   </div>
   <br>
-
-<% end %>
 
   <div class="field">
     <%= profile_img(@user,"edit") if profile_img(@user,"edit") %>
