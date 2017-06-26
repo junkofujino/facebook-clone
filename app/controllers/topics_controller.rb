@@ -4,6 +4,7 @@ class TopicsController < ApplicationController
 
   def index
     @topics = Topic.all
+    @topic = Topic.new
   end
 
   def show
@@ -25,10 +26,13 @@ class TopicsController < ApplicationController
   def create
     @topic = Topic.new(topics_params)
     @topic.user_id = current_user.id
-    if @topic.save
-     redirect_to topics_path, notice: "投稿を作成しました！"
-    else
-     render 'new'
+    respond_to do |format|
+      if @topic.save
+        format.html {redirect_to topics_path, notice: '投稿を作成しました！'}
+        format.js { render :index }
+      else
+        format.html { render :new }
+      end
     end
   end
 

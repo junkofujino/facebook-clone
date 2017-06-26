@@ -2,8 +2,7 @@
  <div class="wrapper col-md-8 col-md-offset-2 col-sm-10">
    <p><%= notice %></p>
 
-   <h1>投稿一覧</h1>
-   <%= link_to "投稿する", new_topic_path, class: 'btn btn-default' %>
+   <%= render partial: 'topics/form', locals: { topic: @topic } %>
 
    <% @topics.each do |topic| %>
    <div class="row" id="row1">
