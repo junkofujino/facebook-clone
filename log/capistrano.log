@@ -890,3 +890,308 @@ Called from /var/www/facebook-clone/shared/bundle/ruby/2.3.0/gems/activesupport-
   INFO [0249c523] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/facebook-clone/current/config/unicorn/production.rb -E deployment -D  as app@52.68.127.104
  DEBUG [0249c523] Command: cd /var/www/facebook-clone/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/facebook-clone/current/config/unicorn/production.rb -E deployment -D  )
   INFO [0249c523] Finished in 2.713 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-27 00:19:17 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [abd1900c] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@52.68.127.104
+ DEBUG [abd1900c] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [abd1900c] Finished in 0.445 seconds with exit status 0 (successful).
+  INFO [00510ab2] Running /usr/bin/env mkdir -p /tmp as app@52.68.127.104
+ DEBUG [00510ab2] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /tmp )
+  INFO [00510ab2] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-facebook-clone-production-fujinojunko.sh 0.0%
+  INFO Uploading /tmp/git-ssh-facebook-clone-production-fujinojunko.sh 100.0%
+  INFO [f6c62260] Running /usr/bin/env chmod 700 /tmp/git-ssh-facebook-clone-production-fujinojunko.sh as app@52.68.127.104
+ DEBUG [f6c62260] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env chmod 700 /tmp/git-ssh-facebook-clone-production-fujinojunko.sh )
+  INFO [f6c62260] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [e82cd890] Running /usr/bin/env git ls-remote --heads https://github.com/junkofujino/facebook-clone as app@52.68.127.104
+ DEBUG [e82cd890] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-facebook-clone-production-fujinojunko.sh" ; /usr/bin/env git ls-remote --heads https://github.com/junkofujino/facebook-clone )
+ DEBUG [e82cd890] 	94c70538c05ad821a9d70119168ec76cf7ae55a5	refs/heads/master
+  INFO [e82cd890] Finished in 0.638 seconds with exit status 0 (successful).
+  INFO [042e926c] Running /usr/bin/env mkdir -p /var/www/facebook-clone/shared /var/www/facebook-clone/releases as app@52.68.127.104
+ DEBUG [042e926c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/facebook-clone/shared /var/www/facebook-clone/releases )
+  INFO [042e926c] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [bf540e08] Running /usr/bin/env mkdir -p /var/www/facebook-clone/shared/log /var/www/facebook-clone/shared/tmp/pids /var/www/facebook-clone/shared/tmp/cache /var/www/facebook-clone/shared/tmp/sockets /var/www/facebook-clone/shared/public/uploads /var/www/facebook-clone/shared/public/assets as app@52.68.127.104
+ DEBUG [bf540e08] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/facebook-clone/shared/log /var/www/facebook-clone/shared/tmp/pids /var/www/facebook-clone/shared/tmp/cache /var/www/facebook-clone/shared/tmp/sockets /var/www/facebook-clone/shared/public/uploads /var/www/facebook-clone/shared/public/assets )
+  INFO [bf540e08] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [4bab4048] Running /usr/bin/env mkdir -p /var/www/facebook-clone/shared /var/www/facebook-clone/shared/config as app@52.68.127.104
+ DEBUG [4bab4048] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/facebook-clone/shared /var/www/facebook-clone/shared/config )
+  INFO [4bab4048] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [3a99813c] Running [ -f /var/www/facebook-clone/shared/.env ] as app@52.68.127.104
+ DEBUG [3a99813c] Command: [ -f /var/www/facebook-clone/shared/.env ]
+ DEBUG [3a99813c] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [992c2e81] Running [ -f /var/www/facebook-clone/shared/config/secrets.yml ] as app@52.68.127.104
+ DEBUG [992c2e81] Command: [ -f /var/www/facebook-clone/shared/config/secrets.yml ]
+ DEBUG [992c2e81] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [fc1ebc71] Running [ -f /var/www/facebook-clone/current/REVISION ] as app@52.68.127.104
+ DEBUG [fc1ebc71] Command: [ -f /var/www/facebook-clone/current/REVISION ]
+ DEBUG [fc1ebc71] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [ba07991c] Running /usr/bin/env cat /var/www/facebook-clone/current/REVISION 2>/dev/null as app@52.68.127.104
+ DEBUG [ba07991c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cat /var/www/facebook-clone/current/REVISION 2>/dev/null )
+ DEBUG [ba07991c] 	5eff485c30852ae16b71fd26ecf5cbdda34e4caf
+ DEBUG [ba07991c] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [6e4e13e3] Running [ -f /var/www/facebook-clone/repo/HEAD ] as app@52.68.127.104
+ DEBUG [6e4e13e3] Command: [ -f /var/www/facebook-clone/repo/HEAD ]
+ DEBUG [6e4e13e3] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/facebook-clone/repo
+ DEBUG [bcedbe79] Running if test ! -d /var/www/facebook-clone/repo; then echo "Directory does not exist '/var/www/facebook-clone/repo'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [bcedbe79] Command: if test ! -d /var/www/facebook-clone/repo; then echo "Directory does not exist '/var/www/facebook-clone/repo'" 1>&2; false; fi
+ DEBUG [bcedbe79] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [b1ac7e5b] Running /usr/bin/env git remote update --prune as app@52.68.127.104
+ DEBUG [b1ac7e5b] Command: cd /var/www/facebook-clone/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-facebook-clone-production-fujinojunko.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [b1ac7e5b] 	Fetching origin
+ DEBUG [b1ac7e5b] 	From https://github.com/junkofujino/facebook-clone
+   5eff485..94c7053  master     -> master
+  INFO [b1ac7e5b] Finished in 0.946 seconds with exit status 0 (successful).
+ DEBUG [a35fe418] Running if test ! -d /var/www/facebook-clone/repo; then echo "Directory does not exist '/var/www/facebook-clone/repo'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [a35fe418] Command: if test ! -d /var/www/facebook-clone/repo; then echo "Directory does not exist '/var/www/facebook-clone/repo'" 1>&2; false; fi
+ DEBUG [a35fe418] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [88377407] Running /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919 as app@52.68.127.104
+ DEBUG [88377407] Command: cd /var/www/facebook-clone/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-facebook-clone-production-fujinojunko.sh" ; /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919 )
+  INFO [88377407] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [edbbae8e] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/facebook-clone/releases/20170626151919 as app@52.68.127.104
+ DEBUG [edbbae8e] Command: cd /var/www/facebook-clone/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-facebook-clone-production-fujinojunko.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/facebook-clone/releases/20170626151919 )
+  INFO [edbbae8e] Finished in 0.168 seconds with exit status 0 (successful).
+ DEBUG [ee5f0a9e] Running if test ! -d /var/www/facebook-clone/repo; then echo "Directory does not exist '/var/www/facebook-clone/repo'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [ee5f0a9e] Command: if test ! -d /var/www/facebook-clone/repo; then echo "Directory does not exist '/var/www/facebook-clone/repo'" 1>&2; false; fi
+ DEBUG [ee5f0a9e] Finished in 0.062 seconds with exit status 0 (successful).
+ DEBUG [024a1d76] Running /usr/bin/env git rev-list --max-count=1 master as app@52.68.127.104
+ DEBUG [024a1d76] Command: cd /var/www/facebook-clone/repo && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-facebook-clone-production-fujinojunko.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [024a1d76] 	94c70538c05ad821a9d70119168ec76cf7ae55a5
+ DEBUG [024a1d76] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [eb80fb09] Running if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [eb80fb09] Command: if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi
+ DEBUG [eb80fb09] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [36ae37be] Running /usr/bin/env echo "94c70538c05ad821a9d70119168ec76cf7ae55a5" >> REVISION as app@52.68.127.104
+ DEBUG [36ae37be] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "94c70538c05ad821a9d70119168ec76cf7ae55a5" >> REVISION )
+  INFO [36ae37be] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [5aa9bac9] Running /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919 /var/www/facebook-clone/releases/20170626151919/config as app@52.68.127.104
+ DEBUG [5aa9bac9] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919 /var/www/facebook-clone/releases/20170626151919/config )
+  INFO [5aa9bac9] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [fa804a48] Running [ -L /var/www/facebook-clone/releases/20170626151919/.env ] as app@52.68.127.104
+ DEBUG [fa804a48] Command: [ -L /var/www/facebook-clone/releases/20170626151919/.env ]
+ DEBUG [fa804a48] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [e8fe3f79] Running [ -f /var/www/facebook-clone/releases/20170626151919/.env ] as app@52.68.127.104
+ DEBUG [e8fe3f79] Command: [ -f /var/www/facebook-clone/releases/20170626151919/.env ]
+ DEBUG [e8fe3f79] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [af96f1af] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/.env /var/www/facebook-clone/releases/20170626151919/.env as app@52.68.127.104
+ DEBUG [af96f1af] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/.env /var/www/facebook-clone/releases/20170626151919/.env )
+  INFO [af96f1af] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [71e5902b] Running [ -L /var/www/facebook-clone/releases/20170626151919/config/secrets.yml ] as app@52.68.127.104
+ DEBUG [71e5902b] Command: [ -L /var/www/facebook-clone/releases/20170626151919/config/secrets.yml ]
+ DEBUG [71e5902b] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [e37ca222] Running [ -f /var/www/facebook-clone/releases/20170626151919/config/secrets.yml ] as app@52.68.127.104
+ DEBUG [e37ca222] Command: [ -f /var/www/facebook-clone/releases/20170626151919/config/secrets.yml ]
+ DEBUG [e37ca222] Finished in 0.073 seconds with exit status 0 (successful).
+  INFO [e5b330c8] Running /usr/bin/env rm /var/www/facebook-clone/releases/20170626151919/config/secrets.yml as app@52.68.127.104
+ DEBUG [e5b330c8] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm /var/www/facebook-clone/releases/20170626151919/config/secrets.yml )
+  INFO [e5b330c8] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [d70e17e7] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/config/secrets.yml /var/www/facebook-clone/releases/20170626151919/config/secrets.yml as app@52.68.127.104
+ DEBUG [d70e17e7] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/config/secrets.yml /var/www/facebook-clone/releases/20170626151919/config/secrets.yml )
+  INFO [d70e17e7] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [eedc85c9] Running /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919 /var/www/facebook-clone/releases/20170626151919/tmp /var/www/facebook-clone/releases/20170626151919/public as app@52.68.127.104
+ DEBUG [eedc85c9] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919 /var/www/facebook-clone/releases/20170626151919/tmp /var/www/facebook-clone/releases/20170626151919/public )
+  INFO [eedc85c9] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [caf3806c] Running [ -L /var/www/facebook-clone/releases/20170626151919/log ] as app@52.68.127.104
+ DEBUG [caf3806c] Command: [ -L /var/www/facebook-clone/releases/20170626151919/log ]
+ DEBUG [caf3806c] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [e489fb09] Running [ -d /var/www/facebook-clone/releases/20170626151919/log ] as app@52.68.127.104
+ DEBUG [e489fb09] Command: [ -d /var/www/facebook-clone/releases/20170626151919/log ]
+ DEBUG [e489fb09] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [a2b79815] Running /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/log as app@52.68.127.104
+ DEBUG [a2b79815] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/log )
+  INFO [a2b79815] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [fc4c4893] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/log /var/www/facebook-clone/releases/20170626151919/log as app@52.68.127.104
+ DEBUG [fc4c4893] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/log /var/www/facebook-clone/releases/20170626151919/log )
+  INFO [fc4c4893] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [b9b1e344] Running [ -L /var/www/facebook-clone/releases/20170626151919/tmp/pids ] as app@52.68.127.104
+ DEBUG [b9b1e344] Command: [ -L /var/www/facebook-clone/releases/20170626151919/tmp/pids ]
+ DEBUG [b9b1e344] Finished in 0.066 seconds with exit status 1 (failed).
+ DEBUG [fb097a9b] Running [ -d /var/www/facebook-clone/releases/20170626151919/tmp/pids ] as app@52.68.127.104
+ DEBUG [fb097a9b] Command: [ -d /var/www/facebook-clone/releases/20170626151919/tmp/pids ]
+ DEBUG [fb097a9b] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [9f3eebb2] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/tmp/pids /var/www/facebook-clone/releases/20170626151919/tmp/pids as app@52.68.127.104
+ DEBUG [9f3eebb2] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/tmp/pids /var/www/facebook-clone/releases/20170626151919/tmp/pids )
+  INFO [9f3eebb2] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [9d15082c] Running [ -L /var/www/facebook-clone/releases/20170626151919/tmp/cache ] as app@52.68.127.104
+ DEBUG [9d15082c] Command: [ -L /var/www/facebook-clone/releases/20170626151919/tmp/cache ]
+ DEBUG [9d15082c] Finished in 0.064 seconds with exit status 1 (failed).
+ DEBUG [abbde78a] Running [ -d /var/www/facebook-clone/releases/20170626151919/tmp/cache ] as app@52.68.127.104
+ DEBUG [abbde78a] Command: [ -d /var/www/facebook-clone/releases/20170626151919/tmp/cache ]
+ DEBUG [abbde78a] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [83447215] Running /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/tmp/cache as app@52.68.127.104
+ DEBUG [83447215] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/tmp/cache )
+  INFO [83447215] Finished in 0.083 seconds with exit status 0 (successful).
+  INFO [ac175d36] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/tmp/cache /var/www/facebook-clone/releases/20170626151919/tmp/cache as app@52.68.127.104
+ DEBUG [ac175d36] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/tmp/cache /var/www/facebook-clone/releases/20170626151919/tmp/cache )
+  INFO [ac175d36] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [1bd9ca43] Running [ -L /var/www/facebook-clone/releases/20170626151919/tmp/sockets ] as app@52.68.127.104
+ DEBUG [1bd9ca43] Command: [ -L /var/www/facebook-clone/releases/20170626151919/tmp/sockets ]
+ DEBUG [1bd9ca43] Finished in 0.063 seconds with exit status 1 (failed).
+ DEBUG [adf6e940] Running [ -d /var/www/facebook-clone/releases/20170626151919/tmp/sockets ] as app@52.68.127.104
+ DEBUG [adf6e940] Command: [ -d /var/www/facebook-clone/releases/20170626151919/tmp/sockets ]
+ DEBUG [adf6e940] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [056e95ec] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/tmp/sockets /var/www/facebook-clone/releases/20170626151919/tmp/sockets as app@52.68.127.104
+ DEBUG [056e95ec] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/tmp/sockets /var/www/facebook-clone/releases/20170626151919/tmp/sockets )
+  INFO [056e95ec] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [eeac70f1] Running [ -L /var/www/facebook-clone/releases/20170626151919/public/uploads ] as app@52.68.127.104
+ DEBUG [eeac70f1] Command: [ -L /var/www/facebook-clone/releases/20170626151919/public/uploads ]
+ DEBUG [eeac70f1] Finished in 0.064 seconds with exit status 1 (failed).
+ DEBUG [eec9de45] Running [ -d /var/www/facebook-clone/releases/20170626151919/public/uploads ] as app@52.68.127.104
+ DEBUG [eec9de45] Command: [ -d /var/www/facebook-clone/releases/20170626151919/public/uploads ]
+ DEBUG [eec9de45] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [b9e1de93] Running /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/public/uploads as app@52.68.127.104
+ DEBUG [b9e1de93] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/public/uploads )
+  INFO [b9e1de93] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [5ef7507d] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/public/uploads /var/www/facebook-clone/releases/20170626151919/public/uploads as app@52.68.127.104
+ DEBUG [5ef7507d] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/public/uploads /var/www/facebook-clone/releases/20170626151919/public/uploads )
+  INFO [5ef7507d] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [d1e9c6c9] Running [ -L /var/www/facebook-clone/releases/20170626151919/public/assets ] as app@52.68.127.104
+ DEBUG [d1e9c6c9] Command: [ -L /var/www/facebook-clone/releases/20170626151919/public/assets ]
+ DEBUG [d1e9c6c9] Finished in 0.064 seconds with exit status 1 (failed).
+ DEBUG [473b9e16] Running [ -d /var/www/facebook-clone/releases/20170626151919/public/assets ] as app@52.68.127.104
+ DEBUG [473b9e16] Command: [ -d /var/www/facebook-clone/releases/20170626151919/public/assets ]
+ DEBUG [473b9e16] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [3456536d] Running /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/public/assets as app@52.68.127.104
+ DEBUG [3456536d] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env rm -rf /var/www/facebook-clone/releases/20170626151919/public/assets )
+  INFO [3456536d] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [b2590d1c] Running /usr/bin/env ln -s /var/www/facebook-clone/shared/public/assets /var/www/facebook-clone/releases/20170626151919/public/assets as app@52.68.127.104
+ DEBUG [b2590d1c] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/shared/public/assets /var/www/facebook-clone/releases/20170626151919/public/assets )
+  INFO [b2590d1c] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [4ee8ed0b] Running if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [4ee8ed0b] Command: if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi
+ DEBUG [4ee8ed0b] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [d6be7366] Running /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/facebook-clone/shared/bundle as app@52.68.127.104
+ DEBUG [d6be7366] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle check --path /var/www/facebook-clone/shared/bundle )
+ DEBUG [d6be7366] 	The following gems are missing
+ DEBUG [d6be7366] 	 * byebug (9.0.6)
+ DEBUG [d6be7366] 	 * debug_inspector (0.0.3)
+ DEBUG [d6be7366] 	 * binding_of_caller (0.7.2)
+ DEBUG [d6be7366] 	 * web-console (2.3.0)
+ DEBUG [d6be7366] 	 * spring (2.0.2)
+ DEBUG [d6be7366] 	 * net-ssh (4.1.0)
+ DEBUG [d6be7366] 	 * net-scp (1.2.1)
+ DEBUG [d6be7366] 	 * sshkit (1.13.1)
+ DEBUG [d6be7366] 	 * airbrussh (1.3.0)
+ DEBUG [d6be7366] 	 * capistrano-harrow (0.5.3)
+ DEBUG [d6be7366] 	 * capistrano (3.6.0)
+ DEBUG [d6be7366] 	 * capistrano-bundler (1.2.0)
+ DEBUG [d6be7366] 	 * capistrano-rails (1.3.0)
+ DEBUG [d6be7366] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [d6be7366] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [d6be7366] 	 * public_suffix (2.0.5)
+ DEBUG [d6be7366] 	 * addressable (2.5.1)
+ DEBUG [d6be7366] 	 * launchy (2.4.3)
+ DEBUG [d6be7366] 	 * letter_opener (1.4.1)
+ DEBUG [d6be7366] 	 * letter_opener_web (1.3.1)
+ DEBUG [d6be7366] 	 * coderay (1.1.1)
+ DEBUG [d6be7366] 	 * method_source (0.8.2)
+ DEBUG [d6be7366] 	 * slop (3.6.0)
+ DEBUG [d6be7366] 	 * pry (0.10.4)
+ DEBUG [d6be7366] 	 * pry-rails (0.3.6)
+ DEBUG [d6be7366] 	 * better_errors (2.1.1)
+ DEBUG [d6be7366] 	Install missing gems with `bundle install`
+ DEBUG [d6be7366] Finished in 0.323 seconds with exit status 1 (failed).
+  INFO [fc8e617e] Running /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/facebook-clone/shared/bundle --without development test --deployment --quiet as app@52.68.127.104
+ DEBUG [fc8e617e] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/local/rbenv/bin/rbenv exec bundle install --path /var/www/facebook-clone/shared/bundle --without development test --deployment --quiet )
+  INFO [fc8e617e] Finished in 2.429 seconds with exit status 0 (successful).
+ DEBUG [33c4f2d0] Running if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [33c4f2d0] Command: if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi
+ DEBUG [33c4f2d0] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [d91c3614] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile as app@52.68.127.104
+ DEBUG [d91c3614] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" RAILS_GROUPS="" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [d91c3614] Finished in 2.599 seconds with exit status 0 (successful).
+ DEBUG [b1374891] Running if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [b1374891] Command: if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi
+ DEBUG [b1374891] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [2e77cd8c] Running /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919/assets_manifest_backup as app@52.68.127.104
+ DEBUG [2e77cd8c] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mkdir -p /var/www/facebook-clone/releases/20170626151919/assets_manifest_backup )
+  INFO [2e77cd8c] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [e0076c7f] Running /usr/bin/env ls /var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest* as app@52.68.127.104
+ DEBUG [e0076c7f] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest* )
+ DEBUG [e0076c7f] 	/var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest-a591559ee8fbe7e99e9721e016c5613b.json
+ DEBUG [e0076c7f] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [504aa537] Running /usr/bin/env ls /var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest* as app@52.68.127.104
+ DEBUG [504aa537] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls /var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest* )
+ DEBUG [504aa537] 	/var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest-a591559ee8fbe7e99e9721e016c5613b.json
+ DEBUG [504aa537] Finished in 0.065 seconds with exit status 0 (successful).
+  INFO [16760ef0] Running /usr/bin/env cp /var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest-a591559ee8fbe7e99e9721e016c5613b.json /var/www/facebook-clone/releases/20170626151919/assets_manifest_backup as app@52.68.127.104
+ DEBUG [16760ef0] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env cp /var/www/facebook-clone/releases/20170626151919/public/assets/.sprockets-manifest-a591559ee8fbe7e99e9721e016c5613b.json /var/www/facebook-clone/releases/20170626151919/assets_manifest_backup )
+  INFO [16760ef0] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [87469ad1] Running if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [87469ad1] Command: if test ! -d /var/www/facebook-clone/releases/20170626151919; then echo "Directory does not exist '/var/www/facebook-clone/releases/20170626151919'" 1>&2; false; fi
+ DEBUG [87469ad1] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [9f5cde9d] Running /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate as app@52.68.127.104
+ DEBUG [9f5cde9d] Command: cd /var/www/facebook-clone/releases/20170626151919 && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec rake db:migrate )
+ DEBUG [9f5cde9d] 	The PGconn, PGresult, and PGError constants are deprecated, and will be
+removed as of version 1.0.
+
+You should use PG::Connection, PG::Result, and PG::Error instead, respectively.
+
+Called from /var/www/facebook-clone/shared/bundle/ruby/2.3.0/gems/activesupport-4.2.3/lib/active_support/dependencies.rb:240:in `load_dependency'
+  INFO [9f5cde9d] Finished in 2.370 seconds with exit status 0 (successful).
+  INFO [8617f919] Running /usr/bin/env ln -s /var/www/facebook-clone/releases/20170626151919 /var/www/facebook-clone/releases/current as app@52.68.127.104
+ DEBUG [8617f919] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ln -s /var/www/facebook-clone/releases/20170626151919 /var/www/facebook-clone/releases/current )
+  INFO [8617f919] Finished in 0.064 seconds with exit status 0 (successful).
+  INFO [ec9a5bb0] Running /usr/bin/env mv /var/www/facebook-clone/releases/current /var/www/facebook-clone as app@52.68.127.104
+ DEBUG [ec9a5bb0] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env mv /var/www/facebook-clone/releases/current /var/www/facebook-clone )
+  INFO [ec9a5bb0] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [db33c492] Running if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [db33c492] Command: if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi
+ DEBUG [db33c492] Finished in 0.063 seconds with exit status 0 (successful).
+ DEBUG [f011d51b] Running [ -e /var/www/facebook-clone/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` as app@52.68.127.104
+ DEBUG [f011d51b] Command: [ -e /var/www/facebook-clone/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid`
+ DEBUG [f011d51b] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO unicorn is running...
+ DEBUG [9f551281] Running if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [9f551281] Command: if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi
+ DEBUG [9f551281] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO unicorn restarting...
+  INFO [ffc935a0] Running /usr/bin/env kill -s USR2 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` as app@52.68.127.104
+ DEBUG [ffc935a0] Command: cd /var/www/facebook-clone/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s USR2 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` )
+  INFO [ffc935a0] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [f3b889b5] Running /usr/bin/env ls -xtr /var/www/facebook-clone/releases as app@52.68.127.104
+ DEBUG [f3b889b5] Command: ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env ls -xtr /var/www/facebook-clone/releases )
+ DEBUG [f3b889b5] 	20170626145705	20170626150247	20170626151919
+ DEBUG [f3b889b5] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [91a98da6] Running if test ! -d /var/www/facebook-clone/releases; then echo "Directory does not exist '/var/www/facebook-clone/releases'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [91a98da6] Command: if test ! -d /var/www/facebook-clone/releases; then echo "Directory does not exist '/var/www/facebook-clone/releases'" 1>&2; false; fi
+ DEBUG [91a98da6] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [3c02932a] Running /usr/bin/env echo "Branch master (at 94c70538c05ad821a9d70119168ec76cf7ae55a5) deployed as release 20170626151919 by fujinojunko" >> /var/www/facebook-clone/revisions.log as app@52.68.127.104
+ DEBUG [3c02932a] Command: cd /var/www/facebook-clone/releases && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env echo "Branch master (at 94c70538c05ad821a9d70119168ec76cf7ae55a5) deployed as release 20170626151919 by fujinojunko" >> /var/www/facebook-clone/revisions.log )
+  INFO [3c02932a] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-27 00:19:50 +0900 cap production unicorn:stop
+  INFO ---------------------------------------------------------------------------
+ DEBUG [943410b8] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@52.68.127.104
+ DEBUG [943410b8] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [943410b8] Finished in 0.326 seconds with exit status 0 (successful).
+ DEBUG [73aaf1bc] Running if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [73aaf1bc] Command: if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi
+ DEBUG [73aaf1bc] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [64b45310] Running [ -e /var/www/facebook-clone/current/tmp/pids/unicorn.pid ] as app@52.68.127.104
+ DEBUG [64b45310] Command: [ -e /var/www/facebook-clone/current/tmp/pids/unicorn.pid ]
+ DEBUG [64b45310] Finished in 0.064 seconds with exit status 0 (successful).
+ DEBUG [6ef76b6a] Running kill -0 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` as app@52.68.127.104
+ DEBUG [6ef76b6a] Command: kill -0 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid`
+ DEBUG [6ef76b6a] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO stopping unicorn...
+  INFO [f74e851e] Running /usr/bin/env kill -s QUIT `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` as app@52.68.127.104
+ DEBUG [f74e851e] Command: cd /var/www/facebook-clone/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" ; /usr/bin/env kill -s QUIT `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` )
+  INFO [f74e851e] Finished in 0.078 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-06-27 00:19:55 +0900 cap production unicorn:start
+  INFO ---------------------------------------------------------------------------
+ DEBUG [92914963] Running [ -d /usr/local/rbenv/versions/2.3.0 ] as app@52.68.127.104
+ DEBUG [92914963] Command: [ -d /usr/local/rbenv/versions/2.3.0 ]
+ DEBUG [92914963] Finished in 0.316 seconds with exit status 0 (successful).
+ DEBUG [852f24d2] Running if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi as app@52.68.127.104
+ DEBUG [852f24d2] Command: if test ! -d /var/www/facebook-clone/current; then echo "Directory does not exist '/var/www/facebook-clone/current'" 1>&2; false; fi
+ DEBUG [852f24d2] Finished in 0.065 seconds with exit status 0 (successful).
+ DEBUG [206657d0] Running [ -e /var/www/facebook-clone/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid` as app@52.68.127.104
+ DEBUG [206657d0] Command: [ -e /var/www/facebook-clone/current/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/facebook-clone/current/tmp/pids/unicorn.pid`
+ DEBUG [206657d0] Finished in 0.067 seconds with exit status 1 (failed).
+  INFO [741a76fb] Running /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/facebook-clone/current/config/unicorn/production.rb -E deployment -D  as app@52.68.127.104
+ DEBUG [741a76fb] Command: cd /var/www/facebook-clone/current && ( export RBENV_ROOT="/usr/local/rbenv" RBENV_VERSION="2.3.0" RAILS_ENV="production" ; /usr/local/rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/facebook-clone/current/config/unicorn/production.rb -E deployment -D  )
+  INFO [741a76fb] Finished in 2.795 seconds with exit status 0 (successful).
