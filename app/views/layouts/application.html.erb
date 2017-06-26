@@ -7,6 +7,7 @@
   <%= csrf_meta_tags %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://js.pusher.com/4.0/pusher.min.js"></script>
+
   <% if user_signed_in? %>
     <script>
       var pusher = new Pusher('<%= ENV["PUSHER_KEY"] %>',{
@@ -52,6 +53,7 @@
           <li><%= link_to conversations_path, class: "navbar-brand" do %>
            <i class="fa fa-commenting fa-1x"></i>
            <% end %></li>
+
           <li><%= link_to notifications_index_path, class: "navbar-brand" do %>
             <i class="fa fa-globe fa-1x"> <span id="unread_count"><%= @notifications_count %></span></i>
         　  <% end %></li>
