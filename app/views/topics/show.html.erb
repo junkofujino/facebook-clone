@@ -4,15 +4,16 @@
     <div class="topic-text">
       <div class="row" id="row1">
           <div class="col" id="col1">
-            <p class="left"><strong>内容</strong></p>
-            <p class="left"><%= @topic.content %></p>
+            <p class="img"><%= image_tag @topic.picture if @topic.picture %></p>
+            <p><%= @topic.content %></p>
           </div>
           <div class="col" id="col2">
             <p class="right">
-              <strong>作成者:</strong>
-              <%= @topic.user.name %><br>
-              <strong>作成時間:</strong>
-              <%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %>
+              <p class="img"><%= profile_img(@topic.user,"topics") if profile_img(@topic.user,"topics") %></p>
+              <p>作成者:<%= @topic.user.name %></p>
+              <p id="tw_date">
+              作成日:<%= @topic.created_at.strftime("%y/%m/%d %p %l:%M") %><br>
+              更新日:<%= @topic.updated_at.strftime("%y/%m/%d %p %l:%M") %></p>
             </p>
           </div>
         </div>

@@ -8,25 +8,27 @@
    <div class="row" id="row1">
     <div class="col" id="col1">
       <%= link_to topic_path(topic.id) do %>
-        <h4><strong><%= topic.content %></strong></h4>
+        <p class="img"><%= image_tag topic.picture if topic.picture %></p>
+        <p><%= topic.content %></p>
       <% end %>
     </div>
     <div class="col" id="col2">
       <p class="img"><%= profile_img(topic.user,"topics") if profile_img(topic.user,"topics") %></p>
       <p>作成者:<%= topic.user.name %></p>
+      <p id="tw_date">
+       作成日:<%= topic.created_at.strftime("%y/%m/%d %p %l:%M") %><br>
+       更新日:<%= topic.updated_at.strftime("%y/%m/%d %p %l:%M") %></p>
     </div>
    </div>
    <div class="row" id="row2">
-    <div class="col" id="col1">
+   <div class="col" id="col1">
+
+    </div>
+    <div class="col" id="col2">
       <% if user_signed_in? && topic.user_id == current_user.id %>
        <%= link_to "編集", edit_topic_path(topic.id), class: 'btn btn-sml btn-success' %>
        <%= link_to "削除", topic_path(topic.id), method: :delete, data: {confirm: '本当に削除していいですか？'}, class: 'btn btn-sml btn-danger' %>
       <% end %>
-    </div>
-    <div class="col" id="col2">
-      <p id="tw_date">
-       作成日:<%= topic.created_at.to_s(:datetime) %><br>
-       更新日:<%= topic.updated_at.to_s(:datetime) %></p>
     </div>
    </div>
    <% end %>

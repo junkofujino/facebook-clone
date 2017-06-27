@@ -14,4 +14,9 @@ module ApplicationHelper
      image_tag(img_url, alt: user.name, class:'img1')
     end
   end
+
+  def topic_img(topic)
+   return image_tag(topic.avatar, alt: topic.id) if topic.avatar?
+  end
+
 end
