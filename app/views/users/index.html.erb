@@ -1,15 +1,20 @@
 <h2>ユーザー一覧</h2>
- <% @users.each do |user| %>
- <div class="wrapper col-md-2 col-sm-4 col-xs-6" id="wrp1">
- <div class="row">
-      <%= link_to user_path(user.id) do %>
-        <h4><strong><%= user.name %></strong></h4>
-      <% end %>
-      <p class="img"><%= profile_img(user) %></p><br>
-      <% if user != current_user && signed_in? %>
-        <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
-        <%= render 'follow_form', user: user %>
-      <% end %>
-    </div>
+<section class="container-fluid">
+<div class="row">
+   <% @users.each do |user| %>
+   <div class="col-md-2 col-sm-4 col-xs-6">
+     <div id="row3">
+        <%= link_to user_path(user.id) do %>
+          <h4><strong><%= user.name %></strong></h4>
+        <% end %>
+        <p class="img"><%= profile_img(user) %></p>
+        <% if user != current_user && signed_in? %>
+          <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: user.id), method: 'post' %>
+          <%= render 'follow_form', user: user %>
+        <% end %>
+        <br>
+     </div>
   </div>
-<% end %>
+  <% end %>
+</div>
+</section>
