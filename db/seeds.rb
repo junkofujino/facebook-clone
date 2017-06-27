@@ -33,7 +33,7 @@ end
                )
 end
 
-@topics = Topic.all
+@topics = Topic.where(id: 1..99)
 
 @topics.each do |topic|
   str1 = topic.user_id.to_s
