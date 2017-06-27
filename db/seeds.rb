@@ -32,3 +32,19 @@ end
                user_id: user_id,
                )
 end
+
+@topics = Topic.all
+
+@topics.each do |topic|
+  str1 = topic.user_id.to_s
+  content = str1+":コメント"
+  created_at = topic.created_at  + 1.hour
+  user_id = topic.user_id + 1
+  topic_id = topic.id
+  Comment.create!(content: content,
+               created_at: created_at,
+               updated_at: created_at,
+               user_id: user_id,
+               topic_id: topic_id,
+               )
+end
