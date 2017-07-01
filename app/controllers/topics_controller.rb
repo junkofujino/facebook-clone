@@ -10,6 +10,8 @@ class TopicsController < ApplicationController
   def show
     @comment = @topic.comments.build
     @comments = @topic.comments
+    @like = Like.find_by(user_id: current_user.id, topic_id: @topic.id)
+    @likes = @topic.likes
     #Notification.find(params[:notification_id]).update(read: true) if params[:notification_id]
     if params[:notification_id]
       notifications = Notification.where(comment: @comments)

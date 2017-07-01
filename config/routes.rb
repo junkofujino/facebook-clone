@@ -20,6 +20,7 @@ Rails.application.routes.draw do
 
   resources :topics, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
     resources :comments
+    resources :likes, only: [:create, :destroy]
   end
 
   if Rails.env.development?

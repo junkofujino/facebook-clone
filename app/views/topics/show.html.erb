@@ -5,7 +5,6 @@
       <div class="row" id="row1">
           <div class="col" id="col1">
             <p class="img"><%= image_tag @topic.picture if @topic.picture %></p>
-            <p><%= @topic.content %></p>
           </div>
           <div class="col" id="col2">
             <p class="right">
@@ -17,6 +16,16 @@
             </p>
           </div>
         </div>
+
+       <div class="row" id="row2">
+          <div class="col" id="col1">
+            <p><%= @topic.content %></p>
+          </div>
+          <div class="col" id="col2">
+            <div id="like-buttons">
+              <%= render partial: 'likes/like', locals: { topic: @topic, likes: @likes, like: @like} %>
+            </div>
+         </div>
       </div>
     <div>
       <p>コメント一覧</p>
@@ -30,4 +39,5 @@
       <%= link_to '投稿一覧へ戻る', topics_path, class: 'btn btn-default' %>
     </div>
   </div>
+ </div>
 </div>
